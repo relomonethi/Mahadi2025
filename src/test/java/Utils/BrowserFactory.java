@@ -34,7 +34,7 @@ public class BrowserFactory {
 
     @Test
     public void test(){
-        startBrowser("efjbkdfbjkhgdvbjkvgdbkn","https://www.saucedemo.com/");
+        startBrowser("gjjdfghbhj","https://www.saucedemo.com/");
     }
 
 }
