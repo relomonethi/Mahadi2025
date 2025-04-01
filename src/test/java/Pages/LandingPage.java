@@ -33,4 +33,9 @@ public class LandingPage {
             WebElement addToCart = driver.findElement(By.id("add-to-cart-sauce-labs-backpack"));
             addToCart.click();
         }
+
+        public void clickCart(){
+        WebElement clickCart = driver.findElement(By.id("shopping_cart_container"));
+        clickCart.click();
+    }
 }

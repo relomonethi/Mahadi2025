@@ -34,7 +34,7 @@ public class InformationPage {
         lastName_id.sendKeys(lastName);
     }
 
-    public void postalCode(String postalCode) {
+    public void enterPostalCode(String postalCode) {
         postalCode_id.sendKeys(postalCode);
     }
 

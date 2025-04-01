@@ -7,12 +7,12 @@ public class purchaseItemTests extends Base{
 
 
     public void enterUsernameTests(){
-        loginPage.enterUsername("standard_user");
+        loginPage.enterUsername(readFromExcel.username);
     }
 
     @Test(dependsOnMethods = "enterUsernameTests")
     public void enterPasswordTest(){
-        loginPage.enterPassword("secrect_sauce");
+        loginPage.enterPassword(readFromExcel.password);
 
     }
     @Test(dependsOnMethods = "enterPasswordTest")
@@ -33,5 +33,19 @@ public class purchaseItemTests extends Base{
     public void clickCartTests(){
         landingPage.clickCart();
     }
+
+    @Test(dependsOnMethods = "clickCartTests")
+    public void informationPageTests(){
+        takeScreenshots.takesSnapShot(driver,"Information Page");
+        informationPage.enterFirstName(readFromExcel.firstName);
+        informationPage.enterLastName(readFromExcel.lastName);
+        informationPage.enterPostalCode(readFromExcel.postalCode);
+    }
+
+    @Test(dependsOnMethods = "informationPageTests")
+    public void clickCheckOutTests(){
+        cartPage.proceedToCheckout();
+    }
+
 
 }
